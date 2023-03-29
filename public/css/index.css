@@ -1,7 +1,78 @@
+:root {
+  background: purple;
+}
+/* главный селектор, отвечающий за весь html документ */
+
 html {
   max-width: 720px;
+
+  background: blue;
 }
 
 body {
   background: #fff;
 }
+
+* {
+  color: red;
+}
+/* // глобальный селектор, используется для всех тегов на всю страницу,
+если не заданы специальные стили .hbs или normalize.css.  */
+
+h1 {
+  color: green;
+}
+/* любой тег h1 в документе будет иметь зеленый цвет шрифта */
+
+.box {
+  background: #cfcfcf;
+}
+/* меняет цвет фона только в тех тегах, в которых есть класс нейм (указывается после . ) */
+
+#user,
+.user {
+  color: blue;
+}
+
+/* используется для тега с идентификатором */
+
+.button {
+  background: red;
+  color: black;
+}
+/* всё что внутри тегов имеет большую приоритетность, чем сами теги */
+
+h1,
+h2#user,
+button.button#button {
+  color: green;
+}
+/* используется сразу для нескольких тегов, их класс неймов и идентификаторам */
+
+#box > p {
+  color: paleturquoise;
+}
+
+footer > .user {
+  color: palevioletred;
+}
+
+footer > h1 {
+  color: palevioletred;
+}
+
+footer em.child,
+footer div.child {
+  color: palegreen;
+}
+
+h1 + p {
+  background: burlywood;
+}
+/* исключительно для тегов рядом стоящих */
+
+h1 ~ p,
+h1 ~ * > p {
+  background: blueviolet;
+}
+/* для всех тегов начиная с сeкции и заканчивая р */
