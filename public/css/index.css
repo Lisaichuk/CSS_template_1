@@ -76,3 +76,61 @@ h1 ~ * > p {
   background: blueviolet;
 }
 /* для всех тегов начиная с сeкции и заканчивая р */
+
+/* селектори 2 частина */
+
+.card-dark {
+  background: #b8b8b8;
+}
+
+.item {
+  color: green;
+}
+
+/* .item:first-child {
+  color: blue;
+}
+
+.item:last-child {
+  color: blue;
+}
+
+.item:only-child {
+  color: blue;
+} */
+
+/* .item:first-of-type {
+  color: blue;
+}
+
+.item:last-of-type {
+  color: blue;
+}
+
+.item:only-of-type {
+  color: red;
+}
+
+.item:nth-child(3n + 1) {
+  color: rgb(0, 255, 174);
+} */
+
+/* 3n або 5n  = кожен 3 або кожен 5 тег з списку */
+/* 3n+1 або 3n-2 = кожен 3 здвинеться на 1 одиницю вниз або вверх */
+
+/* .item:nth-last-child(2n) {
+  color: rgb(0, 255, 174);
+} */
+
+.item:nth-last-of-type(2n) {
+  color: aquamarine;
+}
+
+.item:not(p) {
+  color: blueviolet;
+}
+
+p:empty {
+  height: 20px;
+  background: red;
+}

@@ -3,12 +3,12 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 --}}
 
-<style>
+{{!-- <style>
     h1 {
         color: black;
     }
 </style>
-{{!-- этот код приоритетнее чем тот, что в файле --}}
+этот код приоритетнее чем тот, что в файле --}}
 
 
 
@@ -58,3 +58,23 @@
 
 <body> , aдже наш layout/default.hbs має вже структуру HTML
     --}}
+
+    {{!-- селектори 2 частина --}}
+
+    <div class="card p-5 m-5 card-dark">
+        <ul>
+            <li class="item item-first">1</li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">4</li>
+        </ul>
+    </div>
+
+    <div class="card p-5 m-5 card-dark">
+        <div class="item">First</div>
+        <p class="item">Second</p>
+        <p></p>
+        <strong class="item">Test</strong>
+        <article class="item">Last</article>
+        <article class="item">Last</article>
+    </div>
