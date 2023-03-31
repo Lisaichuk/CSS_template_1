@@ -1,55 +1,55 @@
-:root {
+/* :root {
   background: purple;
-}
+} */
 /* главный селектор, отвечающий за весь html документ */
 
-html {
+/* html {
   max-width: 720px;
 
   background: blue;
-}
+} */
 
 body {
   background: #fff;
 }
 
-* {
+/* * {
   color: red;
-}
+} */
 /* // глобальный селектор, используется для всех тегов на всю страницу,
 если не заданы специальные стили .hbs или normalize.css.  */
 
-h1 {
+/* h1 {
   color: green;
-}
+} */
 /* любой тег h1 в документе будет иметь зеленый цвет шрифта */
 
-.box {
+/* .box {
   background: #cfcfcf;
-}
+} */
 /* меняет цвет фона только в тех тегах, в которых есть класс нейм (указывается после . ) */
 
-#user,
+/* #user,
 .user {
   color: blue;
-}
+} */
 
 /* используется для тега с идентификатором */
 
-.button {
+/* .button {
   background: red;
   color: black;
-}
+} */
 /* всё что внутри тегов имеет большую приоритетность, чем сами теги */
 
-h1,
+/* h1,
 h2#user,
 button.button#button {
   color: green;
-}
+} */
 /* используется сразу для нескольких тегов, их класс неймов и идентификаторам */
 
-#box > p {
+/* #box > p {
   color: paleturquoise;
 }
 
@@ -71,10 +71,11 @@ h1 + p {
 }
 /* исключительно для тегов рядом стоящих */
 
-h1 ~ p,
+/* h1 ~ p,
 h1 ~ * > p {
   background: blueviolet;
-}
+} */
+
 /* для всех тегов начиная с сeкции и заканчивая р */
 
 /* селектори 2 частина */
@@ -83,9 +84,9 @@ h1 ~ * > p {
   background: #b8b8b8;
 }
 
-.item {
+/* .item {
   color: green;
-}
+} */
 
 /* .item:first-child {
   color: blue;
@@ -122,7 +123,7 @@ h1 ~ * > p {
   color: rgb(0, 255, 174);
 } */
 
-.item:nth-last-of-type(2n) {
+/* .item:nth-last-of-type(2n) {
   color: aquamarine;
 }
 
@@ -133,4 +134,62 @@ h1 ~ * > p {
 p:empty {
   height: 20px;
   background: red;
+} */
+
+/* селектори 3 частина */
+
+.input-dark {
+  background: #c0bebe;
+}
+
+.input-dark[required] {
+  background: red;
+}
+
+.input-dark[type='number'] {
+  background: rgb(9, 155, 12);
+}
+
+.input-dark[type='number'] {
+  background: rgb(9, 155, 12);
+}
+
+.small-img[alt~='small'] {
+  height: 500px;
+}
+
+a[rel~='external'] {
+  color: green;
+}
+
+button[class|='btn'] {
+  background: rgb(211, 178, 178);
+}
+
+a[class*='btn'] {
+  background: rgb(150, 24, 24);
+}
+
+a[class$='big'] {
+  background: rgb(20, 3, 102);
+}
+
+.btn::first-letter {
+  color: red;
+}
+
+.big-text::first-line {
+  color: red;
+}
+
+.input-dark::placeholder {
+  color: rgb(253, 255, 253);
+  background: blue;
+}
+
+.before-after::before,
+.before-after::after {
+  content: '$$$';
+  color: green;
+  background: lightgreen;
 }
