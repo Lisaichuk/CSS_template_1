@@ -138,7 +138,7 @@ p:empty {
 
 /* селектори 3 частина */
 
-.input-dark {
+/* .input-dark {
   background: #c0bebe;
 }
 
@@ -192,4 +192,20 @@ a[class$='big'] {
   content: '$$$';
   color: green;
   background: lightgreen;
+} */
+
+a:any-link {
+  background: yellow;
+}
+
+article:dir(rtl) {
+  font-family: arial;
+}
+
+article:defined {
+  color: red;
+}
+
+strong::selection {
+  color: green;
 }
