@@ -194,7 +194,7 @@ a[class$='big'] {
   background: lightgreen;
 } */
 
-a:any-link {
+/* a:any-link {
   background: yellow;
 }
 
@@ -208,4 +208,99 @@ article:defined {
 
 strong::selection {
   color: green;
+} */
+
+/* селектори 4 частина */
+
+#test:target {
+  color: red;
+}
+
+.link:link {
+  color: red;
+}
+
+.link:hover {
+  color: green;
+}
+
+.card:hover {
+  background: lightgreen;
+}
+
+.link:active {
+  color: purple;
+}
+
+input {
+  background-color: gray;
+}
+
+input:focus {
+  background-color: red;
+}
+
+.card:focus-within {
+  background: red;
+}
+
+.card:lang(en) > span::after {
+  background: lightskyblue;
+  content: ' (en)';
+}
+
+button {
+  background-color: greenyellow;
+}
+
+button:enabled {
+  background-color: green;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+.inp:read-write {
+  background-color: blue;
+}
+
+.inp:read-only {
+  background-color: red;
+}
+
+input[type='checkbox']:checked ~ span {
+  background: red;
+}
+
+.valid:valid {
+  background: yellow;
+}
+
+.valid:invalid {
+  background: goldenrod;
+}
+
+.valid:optional {
+  background: green;
+}
+
+.number:focus {
+  background: gray;
+}
+
+.number:out-of-range {
+  background: red;
+}
+
+.number:in-range {
+  background: green;
+}
+
+.number:invalid {
+  background: grey;
+}
+
+.input:placeholder-shown ~ span {
+  background: pink;
 }
