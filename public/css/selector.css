@@ -1,0 +1,250 @@
+/* :root {
+  background: purple;
+} */
+/* главный селектор, отвечающий за весь html документ */
+
+/* html {
+  max-width: 720px;
+
+  background: blue;
+} */
+
+body {
+  background: #fff;
+}
+
+/* * {
+  color: red;
+} */
+/* // глобальный селектор, используется для всех тегов на всю страницу,
+если не заданы специальные стили .hbs или normalize.css.  */
+
+/* h1 {
+  color: green;
+} */
+/* любой тег h1 в документе будет иметь зеленый цвет шрифта */
+
+/* .box {
+  background: #cfcfcf;
+} */
+/* меняет цвет фона только в тех тегах, в которых есть класс нейм (указывается после . ) */
+
+/* #user,
+.user {
+  color: blue;
+} */
+
+/* используется для тега с идентификатором */
+
+/* .button {
+  background: red;
+  color: black;
+} */
+/* всё что внутри тегов имеет большую приоритетность, чем сами теги */
+
+/* h1,
+h2#user,
+button.button#button {
+  color: green;
+} */
+/* используется сразу для нескольких тегов, их класс неймов и идентификаторам */
+
+/* #box > p {
+  color: paleturquoise;
+}
+
+footer > .user {
+  color: palevioletred;
+}
+
+footer > h1 {
+  color: palevioletred;
+}
+
+footer em.child,
+footer div.child {
+  color: palegreen;
+}
+
+h1 + p {
+  background: burlywood;
+}
+/* исключительно для тегов рядом стоящих */
+
+h1 ~ p,
+h1 ~ * > p {
+  background: blueviolet;
+}
+
+/* для всех тегов начиная с сeкции и заканчивая р */
+
+/* селектори 2 частина */
+
+.card-dark {
+  background: #b8b8b8;
+}
+
+.item {
+  color: green;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+.item:last-child {
+  color: blue;
+}
+
+.item:only-child {
+  color: blue;
+}
+
+.item:first-of-type {
+  color: blue;
+}
+
+.item:last-of-type {
+  color: blue;
+}
+
+.item:only-of-type {
+  color: red;
+}
+
+.item:nth-child(3n + 1) {
+  color: rgb(0, 255, 174);
+}
+
+/* 3n або 5n  = кожен 3 або кожен 5 тег з списку */
+/* 3n+1 або 3n-2 = кожен 3 здвинеться на 1 одиницю вниз або вверх */
+
+.item:nth-last-child(2n) {
+  color: rgb(0, 255, 174);
+}
+
+.item:nth-last-of-type(2n) {
+  color: aquamarine;
+}
+
+.item:not(p) {
+  color: blueviolet;
+}
+
+p:empty {
+  height: 20px;
+  background: red;
+}
+
+/* селектори 3 частина */
+
+a:any-link {
+  background: yellow;
+}
+
+article:dir(rtl) {
+  font-family: arial;
+}
+
+article:defined {
+  color: red;
+}
+
+strong::selection {
+  color: green;
+}
+
+/* селектори 4 частина */
+
+#test:target {
+  color: red;
+}
+
+.link:link {
+  color: red;
+}
+
+.link:hover {
+  color: green;
+}
+
+.card:hover {
+  background: lightgreen;
+}
+
+.link:active {
+  color: purple;
+}
+
+input {
+  background-color: gray;
+}
+
+input:focus {
+  background-color: red;
+}
+
+.card:focus-within {
+  background: red;
+}
+
+.card:lang(en) > span::after {
+  background: lightskyblue;
+  content: ' (en)';
+}
+
+button {
+  background-color: greenyellow;
+}
+
+button:enabled {
+  background-color: green;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+.inp:read-write {
+  background-color: blue;
+}
+
+.inp:read-only {
+  background-color: red;
+}
+
+input[type='checkbox']:checked ~ span {
+  background: red;
+}
+
+.valid:valid {
+  background: yellow;
+}
+
+.valid:invalid {
+  background: goldenrod;
+}
+
+.valid:optional {
+  background: green;
+}
+
+.number:focus {
+  background: gray;
+}
+
+.number:out-of-range {
+  background: red;
+}
+
+.number:in-range {
+  background: green;
+}
+
+.number:invalid {
+  background: grey;
+}
+
+.input:placeholder-shown ~ span {
+  background: pink;
+}
