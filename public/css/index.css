@@ -43,3 +43,38 @@ span:hover {
 pre {
   tab-size: 4;
 }
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+
+  font-display: swap;
+}
+
+span {
+  font-size: larger;
+
+  font-weight: lighter;
+
+  /* font-style: oblique; */
+
+  text-rendering: optimizeSpeed;
+}
+
+.test {
+  display: none;
+}
+
+.block {
+  display: block;
+  background: rgb(204, 198, 198);
+
+  margin: auto;
+
+  max-width: 600px;
+
+  width: 100%;
+
+  padding: 15px;
+}
