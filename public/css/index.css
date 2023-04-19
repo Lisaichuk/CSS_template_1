@@ -1,80 +1,107 @@
-.card {
-  color: initial;
+:root {
+  width: 960px;
+  margin-left: 480px;
 }
 
-.card > p {
-  color: green;
-  -webkit-text-fill-color: red;
-  -webkit-text-stroke: 1px blue;
+svg {
+  color: rgb(41, 41, 117);
 }
 
-p:focus,
-p:active,
-p:hover {
-  -webkit-text-fill-color: rgb(219, 250, 48);
-  -webkit-text-stroke: 1px rgb(244, 35, 223);
-
-  direction: rtl;
+.header {
+  padding: 25px;
+  border-bottom: 1px solid #dee2e6;
 }
 
-#test {
-  color: unset;
-  -webkit-text-fill-color: inherit;
-  -webkit-text-stroke: inherit;
-
-  text-align: justify;
-
-  letter-spacing: 0.02em;
+.nav_item {
+  color: #212529;
+  margin-inline: 24px;
 }
 
-span {
-  text-align: left;
-  text-transform: uppercase;
-
-  text-decoration: underline dotted red;
-}
-
-span:hover {
-  text-decoration-color: blue;
-  text-decoration-line: line-through;
-  text-decoration-style: wavy;
-}
-
-pre {
-  tab-size: 4;
-}
-
-* {
-  font-family: 'Roboto', Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 900;
-
-  font-display: swap;
-}
-
-span {
-  font-size: larger;
-
-  font-weight: lighter;
-
-  /* font-style: oblique; */
-
-  text-rendering: optimizeSpeed;
-}
-
-.test {
-  display: none;
-}
-
-.block {
+.hero {
   display: block;
-  background: rgb(204, 198, 198);
+  align-items: center;
+  margin: 50px 0px;
+}
 
-  margin: auto;
+.hero_title {
+  text-align: center;
+  margin-bottom: 12px;
 
+  color: #212529;
+  font-weight: 500;
+  font-size: 56px;
+}
+
+.hero_text {
+  text-align: center;
+  margin: 0 auto;
+
+  font-size: 20px;
   max-width: 600px;
+  color: #212529;
+}
 
+.card {
+  padding: 1px 1px 0px;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 4px;
+}
+
+.card-header {
+  padding: 12px 24px;
+
+  text-align: center;
+  font-size: 24px;
+  color: #212529;
+}
+
+.card-body {
+  text-align: center;
+  padding: 24px;
+}
+
+.card-title {
+  font-size: 40px;
+  color: #212529;
+  margin-bottom: 24px;
+}
+
+span {
+  font-size: 29px;
+  color: #6c757d;
+}
+
+.card_description {
+  display: block;
+  color: #212529;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.card_button {
+  display: block;
   width: 100%;
+  font-size: 19px;
+  padding: 9px;
+}
 
-  padding: 15px;
+.footer {
+  margin-top: 100px;
+  padding: 24px 0;
+  border-top: 1px solid #dee2e6;
+}
+
+.footer_copyright {
+  margin-top: 5px;
+}
+
+.footer_title {
+  display: block;
+  margin-bottom: 12px;
+  color: #212529;
+  font-size: 20;
+}
+
+.footer_links {
+  color: black;
 }

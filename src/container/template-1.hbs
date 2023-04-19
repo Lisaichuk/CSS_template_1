@@ -1,0 +1,69 @@
+<header>
+	{{#with header}}
+	<div class="header row g-0">
+
+		<div class="col-1">
+			{{> logo}}
+		</div>
+
+		<nav class="col-11 text-end">
+			{{#each this}}
+			<a href="{{href}}" class="nav_item">{{text}}</a>
+			{{/each}}
+		</nav>
+	</div>
+	{{/with}}
+</header>
+
+<main>
+	<div class="hero">
+		{{#with hero}}
+		<h1 class="hero_title">{{title}}</h1>
+		<p class="hero_text">{{text}}</p>
+		{{/with}}
+	</div>
+
+	<div class="plans row">
+		{{#each plans}}
+
+		<div class="col-4">
+			<div class="card">
+				<div class="card-header">{{name}}</div>
+				<div class="card-body">
+					<h2 class="card-title">${{price}} <span>/ mo</span></h2>
+
+					<ul class="list-unstyled">
+						{{#each features}}
+						<li class="card_description">{{this}}</li>
+						{{/each}}
+					</ul>
+
+					<button class="card_button {{#if @first}} btn btn-outline-primary {{else}} btn
+						btn-primary {{/if}}">{{button}}</button>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+	</div>
+</main>
+
+<footer class="row g-0 footer">
+
+	<div class="col-3">
+		{{> logo}}
+		<div class="footer_copyright">Copyright 2023</div>
+	</div>
+
+	{{#each footer}}
+	<div class="col-3">
+		<h5 class="footer_title">{{title}}</h5>
+		<ul class="list-unstyled">
+			{{#each links}}
+			<li>
+				<a class="footer_links" href="{{url}}">{{text}}</a>
+			</li>
+			{{/each}}
+		</ul>
+	</div>
+	{{/each}}
+</footer>
