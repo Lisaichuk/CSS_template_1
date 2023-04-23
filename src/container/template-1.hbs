@@ -1,69 +1,69 @@
-<header>
-	{{#with header}}
-	<div class="header row g-0">
+<div class="page">
+	<header class="page_block">
+		{{#with header}}
+		<div class="header row g-0">
 
-		<div class="col-1">
-			{{> logo}}
-		</div>
-
-		<nav class="col-11 text-end">
-			{{#each this}}
-			<a href="{{href}}" class="nav_item">{{text}}</a>
-			{{/each}}
-		</nav>
-	</div>
-	{{/with}}
-</header>
-
-<main>
-	<div class="hero">
-		{{#with hero}}
-		<h1 class="hero_title">{{title}}</h1>
-		<p class="hero_text">{{text}}</p>
-		{{/with}}
-	</div>
-
-	<div class="plans row">
-		{{#each plans}}
-
-		<div class="col-4">
-			<div class="card">
-				<div class="card-header">{{name}}</div>
-				<div class="card-body">
-					<h2 class="card-title">${{price}} <span>/ mo</span></h2>
-
-					<ul class="list-unstyled">
-						{{#each features}}
-						<li class="card_description">{{this}}</li>
-						{{/each}}
-					</ul>
-
-					<button class="card_button {{#if @first}} btn btn-outline-primary {{else}} btn
-						btn-primary {{/if}}">{{button}}</button>
-				</div>
+			<div class="col-1">
+				{{> logo}}
 			</div>
+
+			<nav class="col-11 text-end">
+				{{#each this}}
+				<a href="{{href}}" class="nav_item">{{text}}</a>
+				{{/each}}
+			</nav>
 		</div>
-		{{/each}}
-	</div>
-</main>
+		{{/with}}
+	</header>
 
-<footer class="row g-0 footer">
+	<main>
+		<section class="page_block">
+			{{#with hero}}
+			{{> hero data=this title=title text=text}}
+			{{/with}}
+		</section>
 
-	<div class="col-3">
-		{{> logo}}
-		<div class="footer_copyright">Copyright 2023</div>
-	</div>
+		<section class="page_block">
+			<div class="plans row">
+				{{#each plans}}
 
-	{{#each footer}}
-	<div class="col-3">
-		<h5 class="footer_title">{{title}}</h5>
-		<ul class="list-unstyled">
-			{{#each links}}
-			<li>
+				<div class="col plans_card">
+					<div class="card">
+						<div class="card-header">{{name}}</div>
+						<div class="card-body">
+							<h2 class="card-amount">${{price}} <span>/ mo</span></h2>
+
+							<ul class="list-unstyled">
+								{{#each features}}
+								<li class="card_description">{{this}}</li>
+								{{/each}}
+							</ul>
+
+							<button
+								class="card_button {{#if @first}}btn btn-outline-primary{{else}}btn btn-primary{{/if}}">{{button}}</button>
+						</div>
+					</div>
+				</div>
+				{{/each}}
+			</div>
+		</section>
+	</main>
+
+	<footer class="page_block">
+		<div class="row g-0 footer">
+			<div class="col-3">
+				{{> logo}}
+				<span class="footer_copyright">Copyright 2023</span>
+			</div>
+
+			{{#each footer}}
+			<div class="col-3">
+				<strong class="footer_title">{{title}}</strong>
+				{{#each links}}
 				<a class="footer_links" href="{{url}}">{{text}}</a>
-			</li>
+				{{/each}}
+			</div>
 			{{/each}}
-		</ul>
-	</div>
-	{{/each}}
-</footer>
+		</div>
+	</footer>
+</div>
