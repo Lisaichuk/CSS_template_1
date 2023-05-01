@@ -33,14 +33,16 @@
 						<div class="card-body">
 							<h2 class="card-amount">${{price}} <span>/ mo</span></h2>
 
-							<ul class="list-unstyled">
+							<ul class="card_block">
 								{{#each features}}
 								<li class="card_description">{{this}}</li>
 								{{/each}}
 							</ul>
 
-							<button
-								class="card_button {{#if @first}}btn btn-outline-primary{{else}}btn btn-primary{{/if}}">{{button}}</button>
+							<div class="card_block">
+								<button
+									class="card_button {{#if @first}}btn btn-outline-primary{{else}}btn btn-primary{{/if}}">{{button}}</button>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -48,6 +50,27 @@
 			</div>
 		</section>
 	</main>
+
+	<div class="page_block">
+		<div class="calc">
+			<table class="table">
+				<caption>My table</caption>
+				<tbody>
+					{{#each footer}}
+					<tr>
+						{{#each links}}
+						<td>
+							{{text}}
+						</td>
+						{{/each}}
+						<td></td>
+					</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 
 	<footer class="page_block">
 		<div class="row g-0 footer">

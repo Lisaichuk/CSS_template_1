@@ -1,3 +1,8 @@
+:root {
+  --text-color: #212529;
+  --space-medium: 24px;
+}
+
 .page {
   max-width: 960px;
   margin: 0 auto;
@@ -15,14 +20,20 @@ svg {
 }
 
 .header {
-  padding: 24px;
+  padding: var(--space-medium);
   border-bottom: 1px solid #dee2e6;
 }
 
 .nav_item {
-  color: #212529;
-  margin-inline: 24px;
+  color: var(--text-color, #212529);
+  margin-inline: var(--space-medium);
   text-decoration: none;
+}
+
+.nav_item:hover {
+  text-decoration: underline;
+
+  opacity: 50%;
 }
 
 .hero {
@@ -35,7 +46,7 @@ svg {
   text-align: center;
   margin-bottom: 12px;
 
-  color: #212529;
+  color: var(--text-color, #212529);
   font-weight: 500;
   font-size: 56px;
 }
@@ -46,7 +57,7 @@ svg {
 
   font-size: 20px;
   max-width: 600px;
-  color: #212529;
+  color: var(--text-color, #212529);
 }
 
 .card {
@@ -56,22 +67,22 @@ svg {
 }
 
 .card-header {
-  padding: 12px 24px;
+  padding: 12px var(--space-medium);
 
   text-align: center;
-  font-size: 24px;
-  color: #212529;
+  font-size: var(--space-medium);
+  color: var(--text-color, #212529);
 }
 
 .card-body {
   text-align: center;
-  padding: 24px;
+  padding: var(--space-medium);
 }
 
 .card-amount {
   font-size: 40px;
-  color: #212529;
-  margin-bottom: 24px;
+  color: var(--text-color, #212529);
+  margin-bottom: var(--space-medium);
 }
 
 span {
@@ -81,9 +92,8 @@ span {
 
 .card_description {
   display: block;
-  color: #212529;
+  color: var(--text-color, #212529);
   font-size: 16px;
-  margin-bottom: 12px;
 }
 
 .card_button {
@@ -95,7 +105,7 @@ span {
 
 .footer {
   margin-top: 100px;
-  padding: 24px;
+  padding: var(--space-medium);
   border-top: 1px solid #dee2e6;
 }
 
@@ -110,7 +120,7 @@ span {
 .footer_title {
   display: block;
   margin-bottom: 12px;
-  color: #212529;
+  color: var(--text-color, #212529);
   font-weight: 500;
   font-size: 20px;
 }
@@ -119,4 +129,123 @@ span {
   display: block;
   color: black;
   text-decoration: none;
+}
+
+/* ===================================== */
+
+.card:hover {
+  outline: 2px solid blue;
+  outline-offset: 5px;
+
+  box-shadow: 5px 5px 10px 1px rgba(116, 169, 255, 0.254);
+
+  cursor: not-allowed;
+
+  opacity: 0.5;
+}
+
+.btn {
+  border-radius: 25px;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 10px 1px rgba(116, 169, 255, 0.254);
+}
+
+body {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(127, 106, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.page {
+  /* background-image: url('/img/test2.jpeg');
+
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed; */
+}
+
+.hero_text {
+  /* background-image: url('/img/test2.jpeg'); */
+  /* border: 20px solid black; */
+  padding: 50px;
+  color: #fff;
+
+  border-image-source: url('/img/test2.jpeg');
+  border-image-width: 10% 10%;
+  border-image-slice: 10%;
+  border-image-outset: 50px;
+}
+
+.card_block {
+  /* list-style-type: square; */
+  list-style-position: outside;
+  list-style-image: linear-gradient(
+    to bottom right,
+    blue,
+    red
+  );
+
+  padding: 0;
+}
+
+.card_description {
+  display: list-item;
+}
+
+/* .table tr {
+  border: 1px solid #343a40;
+} */
+
+.table tr td {
+  border: 1px solid #4f6983;
+  border-bottom-color: red;
+  border-right-color: blue;
+}
+
+.table {
+  table-layout: fixed;
+  width: 600px;
+
+  border-collapse: unset;
+  border-spacing: 10px;
+
+  caption-side: top;
+
+  empty-cells: hide;
+}
+
+.nav_item::before {
+  content: open-quote;
+}
+
+.nav_item::after {
+  content: close-quote;
+}
+
+.footer_links::before,
+.footer_links::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-image: url('/img/test2.jpeg');
+}
+
+.footer_links::before {
+  margin-right: 10px;
+}
+
+.footer_links::after {
+  margin-left: 10px;
+}
+
+.calc {
+  width: 600px;
+
+  margin-left: calc(50% - (600px / 2));
 }

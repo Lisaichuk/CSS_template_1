@@ -1,14 +1,14 @@
 <div class="page_content">
 	<header class="page_block">
 		{{#with header}}
-		<div class="header row g-0">
-			<div class="col-3">
+		<div class="header">
+			<div class="">
 				{{> logo}}
 			</div>
 
-			<nav class="col-9 text-end">
+			<nav class="header_nav">
 				{{#each this}}
-				<a href="{{href}}" class="nav_item">{{text}}</a>
+				<a href="{{href}}" class="header_nav_right">{{text}}</a>
 				{{/each}}
 			</nav>
 		</div>
@@ -25,11 +25,9 @@
 	</section>
 
 	<section class="page_block">
-		<div class="row g-4">
+		<div class="flex-container">
 			{{#each preview}}
-			<div class="col-6">
-				{{> cardPreview data=this}}
-			</div>
+			{{> cardPreview class="flex-item" data=this}}
 			{{/each}}
 		</div>
 	</section>
@@ -39,16 +37,14 @@
 			<div class="row g-0">
 				<div class="col-12">
 					<div class="list_header">
-						<div class="row g-0">
-							<div class="col-6">
-								<h2 class="list_title">List of posts</h2>
-							</div>
-							<div class="col-6">
-								<div class="category_list">
-									{{#each categories}}
-									<button class="category_button">{{text}}</button>
-									{{/each}}
-								</div>
+						<div>
+							<h2 class="list_title">List of posts</h2>
+						</div>
+						<div>
+							<div class="category_list">
+								{{#each categories}}
+								<button class="category_button">{{text}}</button>
+								{{/each}}
 							</div>
 						</div>
 					</div>
@@ -79,22 +75,18 @@
 	</main>
 
 	<footer class="page_block">
-		<div class="row g-0 footer">
-			<div class="col-3">
+		<div class="footer">
+			<div>
 				{{> logo}}
 				<span class="footer_copyright">Copyright 2023</span>
 			</div>
 
 			{{#each footer}}
-			<div class="col-3">
+			<div>
 				<strong class="footer_title">{{title}}</strong>
-				<ul class="list-unstyled">
-					{{#each links}}
-					<li>
-						<a class="footer_links" href="{{url}}">{{text}}</a>
-					</li>
-					{{/each}}
-				</ul>
+				{{#each links}}
+				<a class="footer_links" href="{{url}}">{{text}}</a>
+				{{/each}}
 			</div>
 			{{/each}}
 		</div>
