@@ -542,6 +542,7 @@ router.get('/template-4', function (req, res) {
       title: 'Example Page',
     },
 
+    layout: 'template-4',
     header: [
       {
         text: 'Features',
@@ -559,7 +560,7 @@ router.get('/template-4', function (req, res) {
 
     main: {
       heading: 'Oh yeah, it’s that good. See for yourself.',
-      descriotion:
+      description:
         'Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.',
       image: 'https://picsum.photos/500/500',
       button: 'View details',
