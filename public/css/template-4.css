@@ -27,6 +27,9 @@
   background: var(--color-white);
   padding: 0 15px;
 
+  font-family: 'Roboto';
+  font-style: normal;
+
   display: flex;
   justify-content: center;
 }
