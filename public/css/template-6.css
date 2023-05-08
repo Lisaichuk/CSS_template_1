@@ -339,11 +339,11 @@
   border-radius: var(--border-radius-s);
 }
 
-.square:nth-of-type(2) {
+.note:nth-of-type(2) .square {
   background-color: rgb(196, 21, 132);
 }
 
-.square:nth-of-type(3) {
+.note:nth-of-type(3) .square {
   background-color: rgb(100, 4, 152);
 }
 
