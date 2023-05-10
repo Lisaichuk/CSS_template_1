@@ -1,0 +1,338 @@
+:root {
+  --space-xs: 8px;
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-m: 16px;
+
+  --color-border: #253041;
+  --color-white: #fff;
+  --color-primary: #885ffb;
+  --color-text: #9ca3af;
+
+  --border-radius-s: 4px;
+  --border-radius-m: 10px;
+  --border-radius-l: 24px;
+
+  --weight-title: 700;
+  --weight-text: 400;
+
+  --page-width: 1920px;
+}
+
+/* ====================== */
+
+.page {
+  background: #111827;
+  padding: 0px;
+  width: var(--page-width);
+
+  font-family: 'Roboto';
+  font-style: normal;
+
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  max-width: 1150px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 60px;
+}
+
+/* ====================== */
+
+.logo {
+  font-size: var(--size-s);
+  font-weight: var(--weight-title);
+
+  color: var(--color-white);
+  background: var(--color-primary);
+  border-radius: var(--border-radius-m);
+
+  width: 56px;
+  height: 30px;
+  padding: var(--space-xs) var(--space-s);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  padding: var(--space-s) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+
+  max-width: 1150px;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.nav_inline {
+  display: flex;
+  gap: var(--space-l);
+}
+
+.nav_link {
+  color: var(--color-white);
+  font-size: var(--size-m);
+  font-weight: var(--weight-text);
+  text-decoration: none;
+
+  line-height: 100%;
+
+  transition-property: color;
+  transition-duration: 2s;
+}
+
+.nav_link:hover {
+  text-decoration: underline;
+  color: var(--color-primary);
+}
+
+.ad_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-s) 0px 0px;
+  gap: var(--space-xs);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--space-m) 0px var(--space-b);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer_copyright {
+  display: block;
+  color: var(--color-text);
+  font-size: var(--size-m);
+  font-weight: var(--weight-text);
+}
+
+.pages_list {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-m);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+  padding: var(--space-b);
+  gap: 20px;
+
+  background: radial-gradient(
+    100% 625% at 100% 100%,
+    rgba(17, 24, 39, 0) 0%,
+    rgba(78, 63, 146, 0.6) 100%
+  );
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));
+  border-radius: var(--border-radius-l);
+}
+
+.hero_title {
+  display: flex;
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+}
+
+.hero_text {
+  display: flex;
+  text-align: center;
+
+  max-width: 600px;
+  width: 100%;
+
+  font-size: var(--size-m);
+  font-weight: var(--weight-text);
+  line-height: 150%;
+  color: var(--color-text);
+}
+
+.button {
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+  text-decoration: none;
+  background: var(--color-primary);
+  border-radius: var(--border-radius-m);
+
+  transition-property: opacity, text-decoration,
+    background-color;
+  transition-duration: 1s;
+}
+
+.hero_button {
+  width: 150px;
+  height: 40px;
+  padding: var(--space-s) 36px;
+  font-size: var(--size-m);
+}
+
+.button:hover {
+  opacity: 0.5;
+  text-decoration: underline;
+  background-color: var(--color-text);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: var(--space-b);
+  gap: var(--space-m);
+
+  background: rgba(42, 49, 65, 0.44);
+  backdrop-filter: blur(25px);
+  border-radius: var(--border-radius-l);
+}
+
+.about_title {
+  font-size: var(--space-l);
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+}
+
+.about_info {
+  font-size: var(--size-s);
+  font-weight: var(--weight-text);
+  line-height: 170%;
+  color: var(--color-text);
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-b);
+}
+
+.articles_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 877px;
+}
+
+.articles_title {
+  display: flex;
+  font-size: 32px;
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+}
+
+.articles_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-s) 20px;
+  max-width: 120px;
+  /* width: 100%; */
+
+  font-size: var(--size-m);
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+  text-decoration: none;
+  border: 1px solid var(--color-text);
+  border-radius: var(--border-radius-m);
+
+  transition-property: background-color, text-decoration;
+  transition-duration: 1s;
+}
+
+.articles_button:hover {
+  background-color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.articles_cards {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  gap: var(--space-b);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 100%;
+  gap: var(--space-m);
+}
+
+.card_image {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+  width: 362px;
+  height: 200px;
+  border-radius: var(--border-radius-l);
+
+  position: relative;
+}
+
+.image_badge {
+  display: flex;
+  align-items: center;
+  padding: 2px 6px;
+
+  position: absolute;
+  width: 47px;
+  height: 20px;
+  left: 299px;
+  top: 164px;
+
+  font-size: var(--size-m);
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+  background: rgba(251, 95, 95, 0.5);
+  border-radius: var(--border-radius-s);
+}
+
+.card_name {
+  font-size: 18px;
+  font-weight: var(--weight-title);
+  color: var(--color-white);
+}
+
+.card_info {
+  font-size: var(--size-s);
+  font-weight: var(--weight-text);
+  line-height: 150%;
+  color: var(--color-text);
+}
+
+.card_button {
+  padding: var(--space-xs) var(--space-m);
+  width: 85px;
+  height: 30px;
+  font-size: var(--size-s);
+}
