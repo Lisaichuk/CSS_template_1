@@ -1,11 +1,21 @@
-<a href="#">
-	{{> logo}}
-</a>
+{{#with header}}
+<div class="header_top">
+	<a href="#">{{> logo}}</a>
 
-<nav class="header_nav">
 	<div class="nav_inline">
 		{{#each links}}
 		<a href="{{url}}" class="nav_link">{{text}}</a>
 		{{/each}}
 	</div>
-</nav>
+</div>
+
+<div class="header_bottom">
+	<div class="ad_block">
+		<div class="ad_logo">Ad</div>
+		{{#with ad}}
+		<a href="{{url}}" class="ad_link">{{text}}</a>
+		{{/with}}
+	</div>
+	<div class="users_online">Users online: <span>{{userOnline}}</span></div>
+</div>
+{{/with}}
