@@ -456,16 +456,55 @@ body {
 }
 
 @layer adaptive {
-  @media all and (width <= 1000px) {
+  @media all and (width <= 1200px) {
     .page--dashboard {
       grid-template-columns: 1fr;
     }
+  }
 
-    .aside {
-      display: none;
+  @media all and (width <= 960px) {
+    .analytic__block {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-5);
     }
 
-    .header {
+    .shop__block {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing-9);
+    }
+  }
+
+  @media all and (width <= 580px) {
+    .purchase {
+      display: grid;
+      grid-template-columns: 1fr;
+      padding: 12px 0;
+      gap: var(--spacing-4);
+    }
+
+    .page--dashboard {
+      display: block;
+    }
+
+    .analytic__block {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-5);
+    }
+
+    .box {
+      padding: var(--spacing-2);
+    }
+
+    .vertical {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-5);
+    }
+
+    .aside {
       display: none;
     }
   }
