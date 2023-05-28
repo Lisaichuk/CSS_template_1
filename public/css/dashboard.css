@@ -275,6 +275,10 @@ body {
     padding: var(--spacing-9) 0;
   }
 
+  .purchase {
+    height: 304px;
+  }
+
   .purchase__content {
     display: grid;
     align-items: flex-start;
